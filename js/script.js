@@ -1,6 +1,9 @@
 $(document).ready(function() {
   
+  
+  
 $("button").each(function() {
+ 
   var bg = $(this).attr("bg");
   var border = $(this).attr("border");
   var color = $(this).attr("color");
@@ -21,7 +24,15 @@ $("button").each(function() {
   var aradius = $(this).attr("aradius");
   var apad = $(this).attr("apad");
   var athickness = $(this).attr("athickness");
- 
+  
+  var dpad = "5px 10px 5px 10px";
+  var dthickness = "0";
+  
+  $(this).css("padding", "5px 10px 5px 10px");
+  $(this).css("border-width", dthickness);
+  $(this).css("outline", "0");
+  
+  
   
   // Button Background Controls
   //if($(this).attr("bg")) {
@@ -162,7 +173,7 @@ $("button").each(function() {
         if($(this).attr("pad")) {
           $(this).css("padding", pad);
         } else {
-          $(this).css("padding", "");
+          $(this).css("padding", "dpad");
         }
       
       }
@@ -174,7 +185,7 @@ $("button").each(function() {
      });
    
  //    }
-});
+
   
   // Button Border Thickness Controls
    $(this).css("border-width", thickness);
@@ -182,7 +193,7 @@ $("button").each(function() {
           if($(this).attr("athickness")) {
           $(this).css("border-width", athickness);
      } else {
-                $(this).css("border-radius", thickness);
+                $(this).css("border-width", thickness);
      }
      });
    $(this).on("mouseup", function() {
@@ -192,7 +203,7 @@ $("button").each(function() {
         if($(this).attr("thickness")) {
           $(this).css("border-width", thickness);
         } else {
-          $(this).css("border-width", "");
+          $(this).css("border-width", "dthickness");
         }
       
       }
@@ -202,4 +213,14 @@ $("button").each(function() {
      }, function() {
        $(this).css("border-width", thickness);
      });
+
+  
+  
+  
+  
+  
+  
+  
+  
+});
 });
