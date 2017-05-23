@@ -32,6 +32,15 @@ $("button").each(function() {
   $(this).css("border-width", dthickness);
   $(this).css("outline", "0");
   
+  if ($(this).attr("url")) {
+        
+  $(this).click(function(e){
+       var url = $(this).attr("url");
+      e.preventDefault();
+       window.location = url;
+     });
+    }
+  
   
   
   
