@@ -15,6 +15,7 @@ The fake attributes currently supported are as follows:
   pad             (padding)
   color           (font color)
   thickness       (border thickness)
+  url             (URL to be opened when button is clicked on)
   
   hbg             (background color; hover state)
   hborder         (border color; hover state)
