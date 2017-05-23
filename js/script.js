@@ -32,6 +32,12 @@ $("button").each(function() {
   $(this).css("border-width", dthickness);
   $(this).css("outline", "0");
   
+  $(this).on("click", function(e) {
+    var url = $(this).attr("url");
+      e.preventDefault();
+       window.location = url;
+  });
+  
   
   
   // Button Background Controls
