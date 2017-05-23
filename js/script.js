@@ -6,18 +6,21 @@ $("button").each(function() {
   var color = $(this).attr("color");
   var radius = $(this).attr("radius");
   var pad = $(this).attr("pad");
+  var thickness = $(this).attr("thickness");
   
   var hbg = $(this).attr("hbg");
   var hborder = $(this).attr("hborder");
   var hcolor = $(this).attr("hcolor");
   var hradius = $(this).attr("hradius");
   var hpad = $(this).attr("hpad");
+  var hthickness = $(this).attr("hthickness");
   
   var abg = $(this).attr("abg");
   var aborder = $(this).attr("aborder");
   var acolor = $(this).attr("acolor");
   var aradius = $(this).attr("aradius");
   var apad = $(this).attr("apad");
+  var athickness = $(this).attr("athickness");
  
   
   // Button Background Controls
