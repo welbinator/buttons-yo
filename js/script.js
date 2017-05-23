@@ -19,6 +19,8 @@ $("button").each(function() {
   var aradius = $(this).attr("aradius");
   var apad = $(this).attr("apad");
  
+  
+  // Button Background Controls
   //if($(this).attr("bg")) {
      $(this).css("background", bg);
      $(this).on("mousedown", function() {
@@ -40,6 +42,7 @@ $("button").each(function() {
       
       }
     });
+  
      $(this).hover(function() {
        $(this).css("background", hbg);
      }, function() {
@@ -49,7 +52,7 @@ $("button").each(function() {
    //  }
   
   
-  
+  // Button Border Color Controls
  //  if($(this).attr("border")) {
      $(this).css("border-color", border);
      $(this).on("mousedown", function() {
@@ -79,6 +82,7 @@ $("button").each(function() {
    
     // }
   
+  // Button Text Color Controls
  // if($(this).attr("color")) {
      $(this).css("color", color);
      $(this).on("mousedown", function() {
@@ -108,6 +112,7 @@ $("button").each(function() {
    
    //  }
   
+  // Button Border Radius Controls
 // if($(this).attr("radius")) {
      $(this).css("border-radius", radius);
      $(this).on("mousedown", function() {
@@ -137,6 +142,7 @@ $("button").each(function() {
    
   //   }
   
+  // Button Padding Controls
 //  if($(this).attr("pad")) {
      $(this).css("padding", pad);
      $(this).on("mousedown", function() {
@@ -165,9 +171,32 @@ $("button").each(function() {
      });
    
  //    }
-
-  
-  
 });
   
+  // Button Border Thickness Controls
+   $(this).css("border-width", thickness);
+     $(this).on("mousedown", function() {
+          if($(this).attr("athickness")) {
+          $(this).css("border-width", athickness);
+     } else {
+                $(this).css("border-radius", thickness);
+     }
+     });
+   $(this).on("mouseup", function() {
+      if($(this).attr("hthickness")) {
+        $(this).css("border-width", hthickness);
+      } else {
+        if($(this).attr("thickness")) {
+          $(this).css("border-width", thickness);
+        } else {
+          $(this).css("border-width", "");
+        }
+      
+      }
+    });
+     $(this).hover(function() {
+       $(this).css("border-width", hthickness);
+     }, function() {
+       $(this).css("border-width", thickness);
+     });
 });
