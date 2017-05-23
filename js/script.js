@@ -37,7 +37,7 @@ $("button").each(function() {
     var url = $(this).attr("url");
       e.preventDefault();
        window.location = url;
-  }
+  });
   });
   
   
