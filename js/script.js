@@ -32,7 +32,8 @@ $("button").each(function() {
   $(this).css("border-width", dthickness);
   $(this).css("outline", "0");
   
- 
+  
+  
   
   
   
