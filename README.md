@@ -14,18 +14,21 @@ The fake attributes currently supported are as follows:
   radius          (border radius)
   pad             (padding)
   color           (font color)
+  thickness       (border thickness)
   
   hbg             (background color; hover state)
   hborder         (border color; hover state)
   hradius         (border radius; hover state)
   hpad            (padding; hover state)
   hcolor          (font color; hover state)
+  hthickness      (border thickness; hover state)
   
   abg             (background color; active state)
   aborder         (border color; active state)
   aradius         (border radius; active state)
   apad            (padding; active state)
   acolor          (font color; active state)
+  athickness      (border thickness; active state)
   
   
 **How it works**
