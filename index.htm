@@ -16,28 +16,29 @@
 </head>
 
 <body>
-  <h1>Some Example Buttons</h1>
-  <button border="red" bg="#00ff00" color="white" pad="10px" thickness="10px">Button</button>
+  <h1>Rounded Corner Button</h1>
+  <button border="red" thickness="2px" radius="5px" color="red" bg="white">2px Radius</button>
   
-   <button border="orange" bg="red" color="black" pad="5px">Button</button>
-   <button border="blue" bg="green" color="orange" pad="20px">Button</button>
-   <button border="purple" bg="yellow" color="red" pad="50px">Button</button>
+  <button border="red" thickness="2px" radius="5px" color="red" bg="white">5px Radius</button>
   
-  <button border="red" bg="#fff" color="#ff0000" pad="10px" radius="5px" hborder="#0000ff" hbg="#ff0000" hcolor="#fff" abg="blue" acolor="green" aborder="black" apad="50px" aradius="40px" thickness="2px">My Button</button>
+   <button border="red" thickness="2px" radius="10px" color="red" bg="white">10px Radius</button>
   
-  <button abg="red">Click Me</button>
-  <button bg="default">None</button>
+  <h1>Background Changes on Click</h1>
+  <button border="red" thickness="2px" radius="5px" color="red" bg="white" abg="red" acolor="white">Click Me</button>
   
-  <h1>Some Not Stupid Looking Buttons</h1>
+  <button border="blue" thickness="2px" radius="5px" color="white" bg="blue" abg="red" aborder="red" acolor="white">Click Me</button>
   
-  <button border="red" thickness="2px" radius="5px" bg="white" color="red" hbg="red" hcolor="white" url="http://google.com">Open Google</button>
+  <button  radius="5px" color="green" bg="white" abg="green" acolor="white">Click Me</button>
   
-  <button border="red" thickness="2px" radius="5px" bg="white" color="red" hbg="red" hcolor="white" pad="10px 20px 10px 20px" url="http://yahoo.com">Open Yahoo</button>
+  <h1>Open URL on Click</h1>
   
-  <button color="white" bg="red" hcolor="red" hbg="white">Click Me</button>
+  <button border="green" thickness="2px" radius="5px" color="green" bg="white" abg="green" acolor="white" aborder="green" url="http://google.com" target="_blank">New Tab</button>
+  
+  <button border="red" thickness="2px" radius="5px" color="red" bg="white" abg="red" acolor="white" url="http://google.com" target="_self">Same Tab</button>
   
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
+   
 </body>
 </html>
