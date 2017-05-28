@@ -10,6 +10,7 @@ $("button").each(function() {
   var radius = $(this).attr("radius");
   var pad = $(this).attr("pad");
   var thickness = $(this).attr("thickness");
+  var depress = $(this).attr("depress");
   
   var hbg = $(this).attr("hbg");
   var hborder = $(this).attr("hborder");
@@ -18,6 +19,8 @@ $("button").each(function() {
   var hpad = $(this).attr("hpad");
   var hthickness = $(this).attr("hthickness");
   
+  
+  
   var abg = $(this).attr("abg");
   var aborder = $(this).attr("aborder");
   var acolor = $(this).attr("acolor");
@@ -25,30 +28,49 @@ $("button").each(function() {
   var apad = $(this).attr("apad");
   var athickness = $(this).attr("athickness");
   
-  var dpad = "5px 10px 5px 10px";
+  var dpad = "10px 20px 10px 20px";
   var dthickness = "0";
   
-  $(this).css("padding", "5px 10px 5px 10px");
+  
+  
+  $(this).css("padding", "10px 20px 10px 20px");
   $(this).css("border-width", dthickness);
   $(this).css("outline", "0");
   
-  if ($(this).attr("url")) {
+//   if ($(this).attr("url")) {
         
-  $(this).click(function(e){
-       var url = $(this).attr("url");
-      e.preventDefault();
-       window.location = url;
-     });
-    }
+//   $(this).click(function(e){
+//        var url = $(this).attr("url");
+//       e.preventDefault();
+//        window.location = url;
+//      });
+//     }
   
+  if ($(this).attr("url")) {
+    var url = $(this).attr("url");
+    var target = $(this).attr("target");
+    $(this).on("click", function () {
+      window.open(url, target);
+    });
+  }
+   
   
-  
-  
+   $(this).css("position", "relative");
+ $(this).on("mousedown", function() {
+   if($(this).attr("depress")) {
+     $(this).css("top", depress)     
+   }
+ });
+   $(this).on("mouseup", function() {
+     if($(this).attr("depress")) {
+       $(this).css("top", "");
+     }
+ });
   
   
   // Button Background Controls
-  //if($(this).attr("bg")) {
-     $(this).css("background", bg);
+  
+    $(this).css("background", bg);                  // mouse down
      $(this).on("mousedown", function() {
           if($(this).attr("abg")) {
           $(this).css("background", abg);
@@ -56,7 +78,14 @@ $("button").each(function() {
                 $(this).css("background", bg);
      }
      });
-    $(this).on("mouseup", function() {
+  
+  
+  $(this).on("touchend", function() {
+    $(this).css("background", bg);
+  });
+  
+  
+    $(this).on("mouseup", function() {             // mouse up
       if($(this).attr("hbg")) {
         $(this).css("background", hbg);
       } else {
@@ -69,21 +98,23 @@ $("button").each(function() {
       }
     });
   
-     $(this).hover(function() {
+     $(this).hover(function() {                 // hover 
        $(this).css("background", hbg);
      }, function() {
        $(this).css("background", bg);
      });
+    
+ 
+  
    
-   //  }
   
   
   // Button Border Color Controls
- //  if($(this).attr("border")) {
+
      $(this).css("border-color", border);
      $(this).on("mousedown", function() {
           if($(this).attr("aborder")) {
-          $(this).css("border-color", border);
+          $(this).css("border-color", aborder);
      } else {
                 $(this).css("border-color", border);
      }
@@ -105,7 +136,7 @@ $("button").each(function() {
      }, function() {
        $(this).css("border-color", border);
      });
-   
+  
     // }
   
   // Button Text Color Controls
@@ -228,9 +259,10 @@ $("button").each(function() {
 
   
   
+  // depress
   
   
-  
+   
   
   
   
