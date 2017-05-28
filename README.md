@@ -16,6 +16,8 @@ The fake attributes currently supported are as follows:
   color           (font color)
   thickness       (border thickness)
   url             (URL to be opened when button is clicked on)
+  target          (determines target of URL to be opened on click)
+  depress         (button depresses npx on mousedown)
   
   hbg             (background color; hover state)
   hborder         (border color; hover state)
