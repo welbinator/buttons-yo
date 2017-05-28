@@ -36,22 +36,7 @@ The fake attributes currently supported are as follows:
   
 **How it works**
 
-To style a button, start with a simple <button> tag, like so:
+Instead of using CSS to style your buttons, simply add the fake attributs listed above inside the button tag.
 
-<button>Click Me</button>
-
-Then, inside the button tag, add the fake attributes, and give them a css legal value, like so:
-
-   <button bg="#ff0000">Click Me</button>
-
-This will give the button a red background
-
-   <button bg="#ff0000" hbg="#0000ff">Click Me</button>
-
-This will give the button a red background, and a blue background on hover.
-
-   <button bg="#ff0000" hbg="#0000ff" abg="#00ff00">Click Me</button>
-
-This will give the button a red background, a blue background on hover, and a green background on click. Upon releasing the click, the background will return to the specified hover background. If you didn't specifiy a hover background, it will revert back to the original background.
-  
+For instance, to give a button a background color of red, simply add bg="red" inside the button tag. For examples, visit https://welbinator.github.io/buttons-yo
   
